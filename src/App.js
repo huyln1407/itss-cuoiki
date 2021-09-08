@@ -1,7 +1,7 @@
 import CustomHook from "./CustomHook";
 function App() {
     const arrayList = ["Huyen","Hoa","Hung","Long"];
-    const [insertData,onSubmit,data,arrData] = CustomHook(arrayList)
+    const [handleInsertData,onSubmit,data,arrData] = CustomHook(arrayList)
   return (
     <div style={{margin:20,fontWeight:'bold'}}>
        <div style={{marginBottom:20}}>
@@ -11,7 +11,7 @@ function App() {
             追加する名前を入力してください。
         </div>
         <div style={{marginBottom:20}}>
-        <input onChange={insertData}/>
+        <input onChange={handleInsertData}/>
         </div>
         <button style={{marginBottom:20}} onClick={()=>onSubmit()}>
             確定

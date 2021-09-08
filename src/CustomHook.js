@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 function CustomHook(arrList){
     const [data,setData] = useState();
     const [arrData,setArrData] = useState(arrList);
-     const insertData=(e)=>{
+     const handleInsertData=(e)=>{
          setData(e.target.value);
      }
      const onSubmit=()=>{
@@ -10,6 +10,6 @@ function CustomHook(arrList){
          setArrData([...arrData,data]);
          console.log(arrList);
      }
-     return [insertData,onSubmit,data,arrData]
+     return [handleInsertData,onSubmit,data,arrData]
 }
 export default CustomHook;
